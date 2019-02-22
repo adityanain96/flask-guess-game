@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Guessing Game Using Flask
+        </title>
+    </head>
+    <body>
+        {% if num==x %}
+            <h1>You guessed correct number: {{num}}</h1>
+            <h1>Number of tries: {{tries}} </h1>
+        {% elif num>x %}
+            <h1>You guessed too large : {{num}}, try a smaller number </h1>
+            <h1>Number of tries: {{tries}} </h1>
+            <form method="POST">                
+                <input name="number">
+                <input type="submit">  
+            </form>
+        {% else %}
+            <h1>You guessed too small : {{num}}, try a larger number </h1>
+            <h1>Number of tries: {{tries}}  </h1>
+            <form method="POST">
+                <input name="number">
+                <input type="submit">  
+            </form>
+        {% endif %}
+    </body>
+</html
